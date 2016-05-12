@@ -12,11 +12,14 @@ composer require sassnowski/yii-provider-registry
 
 ## Setup
 
-Add this line to your `web/index.php` file right before the call to `(new yii\web\Application($config))->run();`
+Change the last few lines in your `web/index.php` to this:
 
 ```php
+$app = new yii\web\Application($config)
+
 (new \Sassnowski\Yii2\ProviderRegistry\ProviderRegistry(\Yii::$container))->bootstrap();
-(new yii\web\Application($config))->run();
+
+$app->run();
 ```
 
 
