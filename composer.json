@@ -8,5 +8,10 @@
             "email": "ksassnowski@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Sassnowski\\Yii2\\ProviderRegistry\\": "src/"
+        }
+    }
 }
