@@ -25,14 +25,14 @@ class ProviderRegistry
      */
     public function __construct(Container $container)
     {
-        $configPath = Yii::getAlias('@app/bootstrap/services.php');
+        $config = Yii::getAlias('@app/bootstrap/') . 'services.php';
 
-        if (! is_file($configPath))
+        if (! is_file($config))
         {
             throw new RuntimeException('Unable to load bootstrap/services.php. Make sure the file exists.');
         }
             
-        $this->bootstrappers = require($configPath);
+        $this->bootstrappers = require($config);
 
         $this->container = $container;
     }
