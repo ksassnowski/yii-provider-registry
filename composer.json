@@ -1,0 +1,12 @@
+{
+    "name": "sassnowski/yii-provider-registry",
+    "description": "A Laravel inspired way to register services into your yii application.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kai Sassnowski",
+            "email": "ksassnowski@gmail.com"
+        }
+    ],
+    "require": {}
+}
